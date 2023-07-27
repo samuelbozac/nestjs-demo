@@ -8,7 +8,7 @@ export class TimeoutInterceptor implements NestInterceptor {
       if (err instanceof TimeoutError){
         throw new RequestTimeoutException();
       }
-      throw err;
+      throw Error(err);
     }));
   }
 }
